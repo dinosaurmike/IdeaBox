@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:640px;overflow:hidden;font-family:'Plus Jakarta Sans',sans-serif;color:#0f172a;
+ background-color:#f1f5f9;background-size:20px 20px,100px 100px;
+ background-image:linear-gradient(to right,rgba(203,213,225,.45) 1px,transparent 1px),linear-gradient(to bottom,rgba(203,213,225,.45) 1px,transparent 1px),
+ linear-gradient(to right,rgba(148,163,184,.35) 1px,transparent 1px),linear-gradient(to bottom,rgba(148,163,184,.35) 1px,transparent 1px)}
+.left{position:absolute;left:72px;top:0;bottom:0;width:470px;display:flex;flex-direction:column;justify-content:center}
+.logo{display:flex;align-items:center;gap:16px}
+.ib{width:64px;height:64px;border-radius:18px;background:#4f46e5;color:#fff;font-weight:800;font-size:26px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(79,70,229,.35)}
+h1{font-size:76px;font-weight:800;letter-spacing:-2px}
+.tag{margin-top:26px;font-size:30px;line-height:1.3;font-weight:500;color:#334155}
+.steps{margin-top:30px;display:flex;gap:8px;font-family:'JetBrains Mono',monospace;font-size:15px}
+.steps span{padding:6px 12px;border-radius:8px;background:#e2e8f0;color:#475569}
+.steps span.on{background:#4f46e5;color:#fff}
+.card{position:absolute;right:48px;top:50%;transform:translateY(-50%);height:560px;border-radius:24px;box-shadow:0 30px 60px rgba(15,23,42,.18)}
+</style></head><body>
+<div class="left">
+ <div class="logo"><div class="ib">IB</div><h1>IdeaBox</h1></div>
+ <div class="tag">Describe it. See it in 3D.<br>Cut it out of plywood.</div>
+ <div class="steps"><span class="on">1. Prompt</span><span>2. CAD</span><span>3. Physical</span></div>
+</div>
+<img class="card" src="card.png"><!-- card.png: a frame of the hero recording, cropped to the console card -->>
+</body></html>
