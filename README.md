@@ -47,16 +47,20 @@ Created by **Mike Warren** ([@dinosaurmike](https://github.com/dinosaurmike)).
   sheets in one ZIP.
 
 **AI, your way**
-- Works with **Google Gemini**, **OpenAI** or **Anthropic Claude**, using your own API key. Keys
-  are stored only in your browser and sent only to the provider you choose.
-- A **100% offline fallback mode** works without any key at all.
+- **Free to use, no account and no key needed:** on dinomike.ca, IdeaBox's AI runs through a
+  small shared service (a fair-use limit of 30 designs an hour per visitor).
+- Or bring your own **Google Gemini**, **OpenAI** or **Anthropic Claude** key for unlimited use.
+  Your key is stored only in your browser and sent only to the provider you choose.
+- A **100% offline fallback mode** works without any AI at all.
 
 ## How it's built
 
 - A single-page web app: React, bundled with Vite; Tailwind CSS for styling; WebGL (three.js)
   for the 3D studio.
-- The AI providers are called directly from the browser with the user's own key. There is no
-  IdeaBox server and no account.
+- With their own key, visitors' browsers call the AI provider directly. Without one, requests go
+  to `netlify/functions/ideabox-ai.js`, a small Netlify function that holds IdeaBox's Gemini key
+  server-side (never in the app), only answers requests from dinomike.ca, only for IdeaBox's
+  models, and limits each visitor to 30 requests an hour. There are no accounts.
 - Hosting: any static web host. All paths are relative, so it runs from a sub-folder (it lives
   at `/ideabox/` on dinomike.ca).
 
@@ -66,6 +70,7 @@ Created by **Mike Warren** ([@dinosaurmike](https://github.com/dinosaurmike)).
 index.html             the app (loads assets/)
 assets/                the built app: one JavaScript bundle and one stylesheet
 hero-animated.html     an animated showcase of the Prompt → CAD → Physical pipeline
+netlify/functions/     ideabox-ai.js: the shared, key-holding AI service
 docs/images/           the README header (GIF) and the social preview image, with their sources
 ```
 
